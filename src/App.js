@@ -44,13 +44,11 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Body>
-          <StarCanvas />
           <AnimatePresence>
             <div>
               <Hero />
               <Wrapper>
                 <Skills />
-                <Experience />
               </Wrapper>
               <Projects openModal={openModal} setOpenModal={setOpenModal} />
               <Wrapper>

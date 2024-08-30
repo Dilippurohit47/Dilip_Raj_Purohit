@@ -12,7 +12,7 @@ import {
   headTextAnimation,
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
-
+import CV from "../../data/Dilip_Resume 2024.pdf"
 const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -249,9 +249,11 @@ const Hero = () => {
                 <SubTitle>{Bio.description}</SubTitle>
               </motion.div>
 
-              <ResumeButton href={Bio.resume} target="_blank">
+             <a download href={CV}>
+             <ResumeButton href={Bio.resume} target="_blank">
                 Check Resume
               </ResumeButton>
+             </a>
             </HeroLeftContainer>
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
