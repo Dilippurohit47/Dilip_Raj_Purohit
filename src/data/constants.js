@@ -393,7 +393,7 @@ export const projects = [
     tags: ["Next.js", "Cloudinary", "Clerk", "MongoDB", "Stripe"]
     ,
     category: "fullstack",
-    github: "https://github.com/rishavchanda/DecisionHub",
+    github: "https://github.com/Dilippurohit47/imaginify",
     webapp: "https://imaginify-lemon.vercel.app/",
   },
   {
@@ -410,7 +410,7 @@ export const projects = [
       "Redux",
     ],
     category: "fullstack",
-    github: "https://github.com/rishavchanda/Trackify",
+    github: "https://github.com/Dilippurohit47/SketchBook",
     webapp: "https://sketch-book-4759.vercel.app/",
   },
   {
@@ -422,7 +422,7 @@ export const projects = [
     image: Rentals,
     tags:["React.js", "SCSS", "Redux", "Node.js", "Express.js", "MongoDB","multer"]    ,
     category: "fullstack",
-    github: "https://github.com/rishavchanda/Podstream",
+    github: "https://github.com/Dilippurohit47/Rental-Frontend",
     webapp: "https://rental-frontend-six.vercel.app/",
   },
   {
@@ -435,7 +435,7 @@ export const projects = [
     tags: ["Next.js", "Peer.js", "WebSockets","Nodejs"]
     ,
     category: "fullstack",
-    github: "https://github.com/rishavchanda/Project-Management-App",
+    github: "/",
     webapp: "/",
   },
   {
@@ -454,7 +454,7 @@ export const projects = [
       "Tailwind CSS",
     ],
     category: "machine learning",
-    github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
+    github: "https://github.com/Dilippurohit47/Frontend-Ecommerce24",
     webapp: "https://frontend-affiliate-website.vercel.app/",
   },
 ];
