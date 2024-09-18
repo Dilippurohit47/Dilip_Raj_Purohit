@@ -420,12 +420,12 @@ export const projects = [
     description:"A URL shortener app that allows users to shorten URLs and track detailed analytics, including the number of clicks, the city and device used, and visualize the data with graphs for better insights.",
     image: URL,
     tags: [
- react,
- supabase,
- Yup,
- Qrcode,
- shadcnUi,
- postgreSql
+ "react",
+ "supabase",
+ "Yup",
+ "Qrcode",
+ "shadcnUi",
+ "postgreSql"
     ],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/URL-Shortner",
