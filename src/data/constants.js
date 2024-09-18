@@ -3,7 +3,7 @@ import Sketchbook from "../images/skecthbook.png";
 import Rentals from "../images/Rentasl.png";
 import MeetClone from "../images/meet clone.png";
 import Affiliate from "../images/Affiliate.png";
-
+import URL from "../images/urlshortner.png"
 export const Bio = {
   name: "Dilip Purohit",
   roles: ["Full Stack Developer", "UI/UX Designer", "Programmer"],
@@ -384,7 +384,7 @@ export const education = [
 
 export const projects = [
   {
-    id: 11,
+    id: 5,
     title: "Imaginify",
     date: "Jan 2024 - Dec 2023",
     description:
@@ -397,7 +397,7 @@ export const projects = [
     webapp: "https://imaginify-lemon.vercel.app/",
   },
   {
-    id: 9,
+    id: 4,
     title: "Sketchbook",
     date: "Jun 2023 - Jul 2023",
     description:
@@ -412,6 +412,24 @@ export const projects = [
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/SketchBook",
     webapp: "https://sketch-book-4759.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "URL Shortner",
+    date: "Jun 2024 - jun 2024",
+    description:"A URL shortener app that allows users to shorten URLs and track detailed analytics, including the number of clicks, the city and device used, and visualize the data with graphs for better insights.",
+    image: URL,
+    tags: [
+ react,
+ supabase,
+ Yup,
+ Qrcode,
+ shadcnUi,
+ postgreSql
+    ],
+    category: "fullstack",
+    github: "https://github.com/Dilippurohit47/URL-Shortner",
+    webapp: "https://url-shortner-n484lrz58-dilip-purohits-projects.vercel.app/",
   },
   {
     id: 0,
