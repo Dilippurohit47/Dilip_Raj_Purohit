@@ -12,7 +12,7 @@ import {
   headTextAnimation,
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
-import CV from "../../data/Dilip_Resume 2024.pdf"
+import CV from "../../data/Dilip_Resume new update.pdf"
 const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
