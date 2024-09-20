@@ -4,6 +4,8 @@ import Rentals from "../images/Rentasl.png";
 import MeetClone from "../images/meet clone.png";
 import Affiliate from "../images/Affiliate.png";
 import URL from "../images/urlshortner.png"
+import CAR from "../images/car.png"
+
 export const Bio = {
   name: "Dilip Purohit",
   roles: ["Full Stack Developer", "UI/UX Designer", "Programmer"],
@@ -430,6 +432,24 @@ export const projects = [
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/URL-Shortner",
     webapp: "https://url-shortner-n484lrz58-dilip-purohits-projects.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "Car Market",
+    date: "july 2024 - August 2024",
+    description:"In this project, I built a car marketplace using React with Shadcn UI, allowing users to browse and add cars for sale. Users can list their own vehicles by providing details like make, model, year, and price. The app also includes a monthly payment calculator where buyers can calculate loan payments based on loan terms, interest rates, and car price. For communication, I integrated Sendbird to enable real-time chat between buyers and car owners. I used Drizzle ORM to manage database operations, connecting with PostgreSQL for storing car listings, user profiles, and chat data.",
+    image: CAR,
+    tags: [
+ "react",
+ "SendBird",
+ "postgreSql",
+ "taiwindcss",
+  "drizzle orm",
+ "shadcnUi",
+    ],
+    category: "fullstack",
+    github: "https://github.com/Dilippurohit47/Car-Market-Place",
+    webapp: "https://car-market-place-gamma.vercel.app/",
   },
   {
     id: 0,
