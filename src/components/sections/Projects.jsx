@@ -95,7 +95,7 @@ const CardContainer = styled.div`
 `;
 
 const Projects = ({ openModal, setOpenModal }) => {
-  const [toggle, setToggle] = useState("all");
+  const [toggle, setToggle] = useState("fullstack");
   return (
     <Container id="Projects">
       <Wrapper>
@@ -105,8 +105,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             marginBottom: "40px",
           }}
         >
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          I have worked on a wide range of projects. From Fullstacks to Only Ui websites.
         </Desc>
         <ToggleButtonGroup>
           <ToggleButton
@@ -125,15 +124,15 @@ const Projects = ({ openModal, setOpenModal }) => {
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === "fullstack"
-            ? projects.map((project) => (
-                <ProjectCard
+            ? projects.map((project,index) => (
+                <ProjectCard key={index}
                   project={project}
                   openModal={openModal}
                   setOpenModal={setOpenModal}
                 />
               ))
-            : uiProjects.map((project) => (
-                <UiProjectCard
+            : uiProjects.map((project,index) => (
+                <UiProjectCard key={index}
                   project={project}
                   openModal={openModal}
                   setOpenModal={setOpenModal}
