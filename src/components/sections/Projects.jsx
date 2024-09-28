@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { projects } from "../../data/constants";
+import { projects, uiProjects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
+import UiProjectCard from "../cards/UiProjectCard";
 
 const Container = styled.div`
 margin-top: 100px;
@@ -109,30 +110,35 @@ const Projects = ({ openModal, setOpenModal }) => {
         </Desc>
         <ToggleButtonGroup>
           <ToggleButton
-            active={toggle === "all"}
-            onClick={() => setToggle("all")}
+            active={toggle === "fullstack"}
+            onClick={() => setToggle("fullstack")}
           >
             Fullstack
           </ToggleButton>
+
+          <ToggleButton
+            active={toggle === "ui"}
+            onClick={() => setToggle("ui")}
+          >
+            UI
+          </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => (
-              <ProjectCard
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
+          {toggle === "fullstack"
+            ? projects.map((project) => (
+                <ProjectCard
+                  project={project}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+              ))
+            : uiProjects.map((project) => (
+                <UiProjectCard
+                  project={project}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+              ))}
         </CardContainer>
       </Wrapper>
     </Container>

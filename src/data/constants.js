@@ -3,8 +3,11 @@ import Sketchbook from "../images/skecthbook.png";
 import Rentals from "../images/Rentasl.png";
 import MeetClone from "../images/meet clone.png";
 import Affiliate from "../images/Affiliate.png";
-import URL from "../images/urlshortner.png"
-import CAR from "../images/car.png"
+import URL from "../images/urlshortner.png";
+import CAR from "../images/car.png";
+import Ochi from "../images/ui/ochi.png"
+import Vesto from "../images/ui/vesto.png"
+import Cynthia from "../images/ui/cyntiha.png"
 
 export const Bio = {
   name: "Dilip Purohit",
@@ -381,7 +384,6 @@ export const education = [
     desc: "I completed my class 12 high school education at oswal School, Bhiwandi where I studied Science with Computer Science.",
     degree: "ISC(XII), Science with Computer",
   },
- 
 ];
 
 export const projects = [
@@ -392,8 +394,7 @@ export const projects = [
     description:
       "Imagnify offers a cutting-edge online image editing experience with advanced AI features. Users can effortlessly remove backgrounds and unwanted objects, adjust aspect ratios, enhance colors, and restore images to their pristine quality. The platform provides a seamless experience for purchasing credits to unlock premium editing capabilities. Whether for personal or professional use, Imagnify empowers users to elevate their images to new heights with ease and precision.",
     image: Imaginify,
-    tags: ["Next.js", "Cloudinary", "Clerk", "MongoDB", "Stripe"]
-    ,
+    tags: ["Next.js", "Cloudinary", "Clerk", "MongoDB", "Stripe"],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/imaginify",
     webapp: "https://imaginify-lemon.vercel.app/",
@@ -405,12 +406,7 @@ export const projects = [
     description:
       "Sketchbook is a dynamic web application designed for digital drawing and creativity. It offers a wide range of features including drawing, erasing, shaping, and coloring, making it a versatile tool for artists and designers. Utilizing Socket.IO, Sketchbook enables real-time synchronization, allowing users to draw simultaneously across multiple screens, ensuring a collaborative experience. It also includes essential functionalities such as undo and redo, allowing users to easily manage their drawing actions. More features are currently under development to further enhance the user experience and capabilities of Sketchbook.",
     image: Sketchbook,
-    tags: [
-    "Nextjs",
-      "Node Js",
-    "socket.io",
-      "Redux",
-    ],
+    tags: ["Nextjs", "Node Js", "socket.io", "Redux"],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/SketchBook",
     webapp: "https://sketch-book-4759.vercel.app/",
@@ -419,33 +415,29 @@ export const projects = [
     id: 3,
     title: "URL Shortner",
     date: "Jun 2024 - jun 2024",
-    description:"A URL shortener app that allows users to shorten URLs and track detailed analytics, including the number of clicks, the city and device used, and visualize the data with graphs for better insights.",
+    description:
+      "A URL shortener app that allows users to shorten URLs and track detailed analytics, including the number of clicks, the city and device used, and visualize the data with graphs for better insights.",
     image: URL,
-    tags: [
- "react",
- "supabase",
- "Yup",
- "Qrcode",
- "shadcnUi",
- "postgreSql"
-    ],
+    tags: ["react", "supabase", "Yup", "Qrcode", "shadcnUi", "postgreSql"],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/URL-Shortner",
-    webapp: "https://url-shortner-n484lrz58-dilip-purohits-projects.vercel.app/",
+    webapp:
+      "https://url-shortner-n484lrz58-dilip-purohits-projects.vercel.app/",
   },
   {
     id: 7,
     title: "Car Market",
     date: "july 2024 - August 2024",
-    description:"In this project, I built a car marketplace using React with Shadcn UI, allowing users to browse and add cars for sale. Users can list their own vehicles by providing details like make, model, year, and price. The app also includes a monthly payment calculator where buyers can calculate loan payments based on loan terms, interest rates, and car price. For communication, I integrated Sendbird to enable real-time chat between buyers and car owners. I used Drizzle ORM to manage database operations, connecting with PostgreSQL for storing car listings, user profiles, and chat data.",
+    description:
+      "In this project, I built a car marketplace using React with Shadcn UI, allowing users to browse and add cars for sale. Users can list their own vehicles by providing details like make, model, year, and price. The app also includes a monthly payment calculator where buyers can calculate loan payments based on loan terms, interest rates, and car price. For communication, I integrated Sendbird to enable real-time chat between buyers and car owners. I used Drizzle ORM to manage database operations, connecting with PostgreSQL for storing car listings, user profiles, and chat data.",
     image: CAR,
     tags: [
- "react",
- "SendBird",
- "postgreSql",
- "taiwindcss",
-  "drizzle orm",
- "shadcnUi",
+      "react",
+      "SendBird",
+      "postgreSql",
+      "taiwindcss",
+      "drizzle orm",
+      "shadcnUi",
     ],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/Car-Market-Place",
@@ -458,7 +450,15 @@ export const projects = [
     description:
       "Rentals is a web platform for easy rental property management, allowing owners to list properties with detailed descriptions and multiple images. Users can browse, search, and book rentals seamlessly with a real-time calendar that calculates costs. They can also save properties to favorites and select specific dates and times for their bookings, making Rentals a user-friendly solution for both renters and hosts.",
     image: Rentals,
-    tags:["React.js", "SCSS", "Redux", "Node.js", "Express.js", "MongoDB","multer"]    ,
+    tags: [
+      "React.js",
+      "SCSS",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "multer",
+    ],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/Rental-Frontend",
     webapp: "https://rental-frontend-six.vercel.app/",
@@ -470,8 +470,7 @@ export const projects = [
     description:
       "Video Call App is a real-time video conferencing platform that allows multiple users to engage in seamless video calls, similar to Google Meet. The app supports peer-to-peer connections for low-latency video streaming and offers real-time communication features like chat and screen sharing. With its user-friendly interface and robust scalability, it is perfect for both personal and professional video conferencing needs.",
     image: MeetClone,
-    tags: ["Next.js", "Peer.js", "WebSockets","Nodejs"]
-    ,
+    tags: ["Next.js", "Peer.js", "WebSockets", "Nodejs"],
     category: "fullstack",
     github: "/",
     webapp: "/",
@@ -494,5 +493,35 @@ export const projects = [
     category: "machine learning",
     github: "https://github.com/Dilippurohit47/Frontend-Ecommerce24",
     webapp: "https://frontend-affiliate-website.vercel.app/",
+  },
+];
+
+export const uiProjects = [
+  {
+    id: 1,
+    title: "Ochi Design",
+    date: "sep 2023 - sep 2023",
+    image: Ochi,
+    tags: ["React", "locomotive", "Gsap"],
+    category: "Ui",
+    webapp: "https://ochi-design.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Vesto Clone",
+    date: "oct 2023 - oct 2023",
+    image: Vesto,
+    tags: ["React"],
+    category: "Ui",
+    webapp: "https://vesto-clone.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Cynthia Ugwu Website",
+    date: "oct 2023 - oct 2023",
+    image: Cynthia,
+    tags: ["Html","css","js"],
+    category: "Ui",
+    webapp: "https://cynthia-ugwu-website.vercel.app/",
   },
 ];
