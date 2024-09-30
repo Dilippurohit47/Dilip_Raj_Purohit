@@ -8,6 +8,7 @@ import CAR from "../images/car.png";
 import Ochi from "../images/ui/ochi.png"
 import Vesto from "../images/ui/vesto.png"
 import Cynthia from "../images/ui/cyntiha.png"
+import Xora from "../images/ui/XORA.png"
 
 export const Bio = {
   name: "Dilip Purohit",
@@ -497,6 +498,20 @@ export const projects = [
 ];
 
 export const uiProjects = [
+
+
+  
+  {
+    id: 0,
+    title: "Saas Landing Page",
+    date: "sep 2024 - sep 2024",
+    image: Xora,
+    tags: ["React","tailwind"],
+    category: "Ui",
+    webapp: "https://saas-landing-page-kclg.vercel.app/",
+  },
+
+
   {
     id: 1,
     title: "Ochi Design",
