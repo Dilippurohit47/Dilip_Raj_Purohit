@@ -88,7 +88,7 @@ const Members = styled.div`
   padding-left: 10px;
 `;
 const Avatar = styled.img`
-  width: 38px;
+  width: 38x;
   height: 38px;
   border-radius: 50%;
   margin-left: -10px;
@@ -108,7 +108,7 @@ const ProjectCard = ({ project, setOpenModal }) => {
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
       <Image src={project.image} />
       <Tags>
-        {project.tags?.map((tag, index) => (
+        {project.tags?.map((tag) => (
           <Tag>{tag}</Tag>
         ))}
       </Tags>
@@ -117,11 +117,6 @@ const ProjectCard = ({ project, setOpenModal }) => {
         <Date>{project.date}</Date>
         <Description>{project.description}</Description>
       </Details>
-      <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} />
-        ))}
-      </Members>
     </Card>
   );
 };

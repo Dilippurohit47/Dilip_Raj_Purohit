@@ -5,10 +5,12 @@ import MeetClone from "../images/meet clone.png";
 import Affiliate from "../images/Affiliate.png";
 import URL from "../images/urlshortner.png";
 import CAR from "../images/car.png";
-import Ochi from "../images/ui/ochi.png"
-import Vesto from "../images/ui/vesto.png"
-import Cynthia from "../images/ui/cyntiha.png"
-import Xora from "../images/ui/XORA.png"
+import Ochi from "../images/ui/ochi.png";
+import Vesto from "../images/ui/vesto.png";
+import Cynthia from "../images/ui/cyntiha.png";
+import Xora from "../images/ui/XORA.png";
+import English from "../images/EnglishAi.png";
+import Linkroom from "../images/Linkroom.png";
 
 export const Bio = {
   name: "Dilip Purohit",
@@ -389,6 +391,47 @@ export const education = [
 
 export const projects = [
   {
+    id: 16,
+    title: "LinkRoom",
+    date: "oct 2024 - oct 2024",
+    description:
+      "It is my first scalable product, LinkRoom, where people can create multiple rooms, and within each room, they can add various links. Users can upload custom thumbnails for each room and share a single room link, allowing others to access all the links within that room. Additionally, users can view detailed analytics, including the number of clicks from specific locations and the devices used to access the room.",
+    image: Linkroom,
+    tags: [
+      "Next.js",
+      "PostgreSql",
+      "Prisma",
+      "Swr",
+      "cloudinary",
+      "Recharts",
+      "clerk",
+      "shadcnUi",
+    ],
+    category: "fullstack",
+    github: "https://github.com/Dilippurohit47/LinkManager",
+    webapp: "linkmanager.up.railway.app",
+  },
+  {
+    id: 15,
+    title: "englishlearn.ai",
+    date: "sept 2024 - sept 2024",
+    description:
+      "This is my own unique product designed to help users improve their English conversation skills. The app acts as a conversation partner, allowing users to speak in English, receive real-time responses, and get corrections for mistakes. It also supports speech recognition, enabling users to talk to the app naturally.The app features a credits and plan system—free users get a limited number of credits, while paid users can access premium plans, all integrated seamlessly with Razorpay for easy transactions.",
+    image: English,
+    tags: [
+      "Next.js",
+      "GeminiApi",
+      "Razorpay",
+      "Clerk",
+      "supabse",
+      "webhooks",
+      "shadcnUi",
+    ],
+    category: "fullstack",
+    github: "https://github.com/Dilippurohit47/Ai-Based-English-learning-App",
+    webapp: "https://learn-englishai.vercel.app/",
+  },
+  {
     id: 5,
     title: "Imaginify",
     date: "Jan 2024 - Dec 2023",
@@ -498,19 +541,15 @@ export const projects = [
 ];
 
 export const uiProjects = [
-
-
-  
   {
     id: 0,
     title: "Saas Landing Page",
     date: "sep 2024 - sep 2024",
     image: Xora,
-    tags: ["React","tailwind"],
+    tags: ["React", "tailwind"],
     category: "Ui",
     webapp: "https://saas-landing-page-kclg.vercel.app/",
   },
-
 
   {
     id: 1,
@@ -535,7 +574,7 @@ export const uiProjects = [
     title: "Cynthia Ugwu Website",
     date: "oct 2023 - oct 2023",
     image: Cynthia,
-    tags: ["Html","css","js"],
+    tags: ["Html", "css", "js"],
     category: "Ui",
     webapp: "https://cynthia-ugwu-website.vercel.app/",
   },
