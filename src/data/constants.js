@@ -409,7 +409,7 @@ export const projects = [
     ],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/LinkManager",
-    webapp: "https://linkmanager.up.railway.app",
+    webapp: "https://linkmanager.up.railway.app/",
   },
   {
     id: 15,
