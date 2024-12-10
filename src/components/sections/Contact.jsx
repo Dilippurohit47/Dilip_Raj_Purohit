@@ -126,6 +126,12 @@ const ContactButton = styled.input`
   font-weight: 600;
 `;
 
+const SpanBox = styled.span`
+  text-decoration: underline;
+  text-decoration-color: white; /* Ensures underline is white */
+  font-weight: 600; /* Slightly bold */
+  color: white; /* Ensures the text itself is also white */
+`;
 const Contact = () => {
   const form = useRef();
 
@@ -156,7 +162,9 @@ const Contact = () => {
         <EarthCanvas />
         <Title>Contact</Title>
         <Desc>
-          Feel free to reach out to me for any questions or opportunities!
+          Feel free to reach out to me for any questions or opportunities! or
+          Contact directly via this email :{" "}
+          <SpanBox>dilippurohit204@gmail.com</SpanBox>
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
