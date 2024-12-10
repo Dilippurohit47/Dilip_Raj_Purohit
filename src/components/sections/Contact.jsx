@@ -97,6 +97,7 @@ const ContactInputMessage = styled.textarea`
   }
 `;
 const ContactButton = styled.input`
+  cursor: pointer;
   width: 100%;
   text-decoration: none;
   text-align: center;
@@ -132,18 +133,19 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_79xs2ty",
+        "service_7yvknjj",
         "template_b2pkpjc",
         form.current,
         "h0kr_NrMr6D8UiQ_n"
       )
       .then(
         (result) => {
-          alert("Message Sent");
+          alert("Message Sent Successfully ");
           form.current.reset();
         },
         (error) => {
-          alert(error);
+          console.log(error);
+          alert("Internal server error try again");
         }
       );
   };
@@ -156,7 +158,7 @@ const Contact = () => {
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm  ref={form} onSubmit={handleSubmit}>
+        <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
