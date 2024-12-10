@@ -134,9 +134,20 @@ const SpanBox = styled.span`
 `;
 const Contact = () => {
   const form = useRef();
-
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if form fields are empty manually
+    const name = form.current?.from_name.value.trim();
+    const email = form.current?.from_email.value.trim();
+    const subject = form.current?.subject.value.trim();
+    const message = form.current?.message.value.trim();
+    if (!name || !email || !subject || !message) {
+      alert("Please fill out all required fields!");
+      return;
+    }
+
+    // If valid, proceed with sending the email
     emailjs
       .sendForm(
         "service_7yvknjj",
@@ -146,16 +157,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          alert("Message Sent Successfully ");
-          form.current.reset();
+          alert("Message Sent Successfully!");
+          form.current.reset(); // Reset the form after successful submission
         },
         (error) => {
-          console.log(error);
-          alert("Internal server error try again");
+          // console.error("EmailJS Error: ", error);
+          alert("Internal server error, please try again later.");
         }
       );
   };
-
   return (
     <Container>
       <Wrapper>
