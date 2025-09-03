@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { projects, uiProjects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
@@ -96,6 +96,7 @@ const CardContainer = styled.div`
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("fullstack");
+ 
   return (
     <Container id="Projects">
       <Wrapper>

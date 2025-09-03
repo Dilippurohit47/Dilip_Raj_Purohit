@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Card = styled.div`
   width: 330px;
   height: 490px;
-  background-color: ${({ theme }) => theme.card};
+   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
@@ -105,7 +105,7 @@ const Button = styled.a`
 
 const ProjectCard = ({ project, setOpenModal }) => {
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
+    <Card  onClick={() => setOpenModal({ state: true, project: project })}>
       <Image src={project.image} />
       <Tags>
         {project.tags?.map((tag) => (

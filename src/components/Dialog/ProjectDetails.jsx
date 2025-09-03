@@ -1,6 +1,6 @@
 import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Modal } from "@mui/material";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -133,13 +133,43 @@ const Button = styled.a`
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+const modalRef = useRef()
+
+useEffect(() =>{
+console.log('rundi')
+const handleClickOutside =(e) =>{
+  console.log("clicked")
+  console.log(e.target)
+  console.log(openModal)
+if(modalRef.current && !modalRef.current.contains(e.target)){
+  console.log("clicked outside")
+  setOpenModal({ state: false, project: null })
+}
+}
+
+if(openModal){
+  window.addEventListener("mousedown",handleClickOutside)
+}else{
+  window.removeEventListener("mousedown",handleClickOutside)
+}
+
+return() =>{
+  window.removeEventListener("mousedown",handleClickOutside)
+}
+
+
+},[openModal,setOpenModal])
+
   return (
     <Modal
       open={true}
       onClose={() => setOpenModal({ state: false, project: null })}
     >
-      <Container>
-        <Wrapper>
+      <Container >
+        <Wrapper 
+      ref={modalRef}
+      
+      >
           <CloseRounded
             style={{
               position: "absolute",
