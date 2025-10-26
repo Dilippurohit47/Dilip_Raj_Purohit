@@ -15,7 +15,8 @@ const [loading,setLoading]  = useState(true)
       try {
 const res = await fetch(`${baseUrl}/get-7d-logs`)  
 const data = await res.json()
-if(res.status === 200){
+if(data.success){
+  console.log("in 200")
   setSevenDaysLogs(data?.seven_days_logs)
 }
       } catch (error) {
@@ -26,17 +27,16 @@ if(res.status === 200){
     }
 getSevenDaysLogs()
   },[])
+  console.log("object",sevenDaysLogs)
 
     return <div  id="coding-time" className="code-tracker-parent">
 <div className="heading" >
 Weekly Hustle 💥
 </div>
 <div className="logs-parent">
-  {
-    loading && <div className="loader"> loading...</div>
-  }
-{  setSevenDaysLogs.length > 0  ? setSevenDaysLogs.length > 0  &&
-sevenDaysLogs.map((log) =>{
+
+{ sevenDaysLogs.length > 0 ?
+sevenDaysLogs?.map((log) =>{
 let workDone = (log.grand_total.hours * 60 )+ log.grand_total.minutes
 let totalTime = 14 * 60
 let progress = workDone === 0 ? 0 : (workDone / totalTime) * 100;
@@ -51,7 +51,11 @@ return <div  className="single-week">
  </div>
 </div>
   })
-   :"currently not avialablec"
+   : <div className="loader" style={{backgroundColor:"" , color:"white"}}> {loading ? "Loading.." : <span style={{fontSize:"1rem"}}>
+    currently not avialable
+    </span>} 
+
+   </div>
 }
 
 
