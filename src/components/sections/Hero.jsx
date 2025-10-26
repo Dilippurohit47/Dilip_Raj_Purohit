@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
@@ -13,6 +13,7 @@ import {
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
 import CV from "../../data/Dilip_Resume.pdf"
+import { baseUrl } from "../..";
 const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -136,8 +137,8 @@ const ResumeButton = styled.a`
   appearance: button;
   text-decoration: none;
 
-  width: 95%;
-  max-width: 300px;
+  width: 100%;
+  min-width: 250px;
   text-align: center;
   padding: 16px 0;
 
@@ -216,6 +217,39 @@ const HeroBg = styled.div`
 `;
 
 const Hero = () => {
+
+
+
+  const [todayRange , setTodayRange] = useState([])
+  const [progress , setProgress] = useState(0)
+  const progressButtonRef = useRef()
+  const  [showToolTip,setToolTip] = useState(false)
+  useEffect(() =>{
+
+    const getTodayRange = async() =>{
+      const response = await fetch(`${baseUrl}/get-today-logs`)
+      const data = await response.json()
+      setTodayRange(data.today_logs?.data[0].grand_total)
+    }
+    getTodayRange()
+  },[])
+
+  useEffect(() =>{
+    if(!todayRange) return
+let workDone = (todayRange?.hours * 60 ) + todayRange?.minutes
+let totalTime = 14 * 60
+let progress = workDone === 0 ? 0 : (workDone / totalTime) * 100;
+setProgress(progress)
+  },[todayRange])
+
+
+  const MouseEnter = () =>{
+    setToolTip(true)
+  }
+  const MouseLeave =() =>{
+    setToolTip(false)
+  }
+
   return (
     <div id="About">
       <HeroContainer>
@@ -248,12 +282,27 @@ const Hero = () => {
               <motion.div {...headContentAnimation}>
                 <SubTitle>{Bio.description}</SubTitle>
               </motion.div>
-
+<div className="action-button">
              <a download href={CV}>
              <ResumeButton href={Bio.resume} target="_blank">
                 Check Resume
               </ResumeButton>
              </a>
+{             
+<div  onMouseEnter={()=>MouseEnter()} onMouseLeave={()=>MouseLeave()} className="single-week-glow" ref={progressButtonRef}>
+  <div  className="progress-bar" style={{width:`${progress}%`}}/>
+ <div className="time-container-hero"> 
+    <span className="hours">{todayRange?.hours || 0}hr</span>:  
+    <span className="minutes">{todayRange?.minutes || 0}min</span>
+  </div>
+  </div>
+}
+{
+  showToolTip &&   <div className="tool-tip">
+Another productive day of coding! Here’s my total time
+      </div>
+}
+</div>  
             </HeroLeftContainer>
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>

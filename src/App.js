@@ -13,6 +13,7 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
 import { useState } from "react";
+import CodeTracker from "./components/sections/CodeTracker";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -47,6 +48,7 @@ function App() {
           <AnimatePresence>
             <div>
               <Hero />
+              <CodeTracker/>
               <Wrapper>
                 <Skills />
               </Wrapper>

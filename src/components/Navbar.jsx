@@ -58,6 +58,7 @@ const NavItems = styled.ul`
 const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
+  text-wrap:nowrap;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
@@ -149,6 +150,7 @@ const Navbar = () => {
         </MobileIcon>
 
         <NavItems>
+          <NavLink href="#coding-time">Hustle Today</NavLink>
           <NavLink href="#Experience">Experience</NavLink>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
@@ -159,6 +161,9 @@ const Navbar = () => {
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
         
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#coding-time">
+              Hustle Today
+            </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
               About
             </NavLink>
