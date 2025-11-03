@@ -12,6 +12,7 @@ import Xora from "../images/ui/XORA.png";
 import English from "../images/EnglishAi.png";
 import Linkroom from "../images/Linkroom.png";
 import Redis from "../images/redis-database-logo-red-geometric-flat-design-icon.png";
+import ChatApp from "../images/chat-app.png";
 import Typescript from "../images/ts.png";
 
 export const Bio = {
@@ -19,7 +20,7 @@ export const Bio = {
   roles: ["Full Stack Developer", "UI/UX Designer", "Programmer"],
   description:
     "I'm a third-year student at Parul University and a dedicated MERN stack developer. With a knack for creating impactful full-stack projects and eye-catching UI designs, I've found success as a video editor as well. A fast learner and workaholic, I thrive on challenges and bring strong communication skills to every project. My ability to easily connect with people has allowed me to build a network that fuels my passion for continuous learning and innovation.",
-
+resume:"https://drive.google.com/file/d/1lUxieHriw2oOGni0oVlYYY87O2OW_gl5/view",
   linkedin: "https://www.linkedin.com/in/dileep47/",
   twitter: "https://twitter.com/RishavChanda",
   insta: "https://www.instagram.com/dilip_purohit47/",
@@ -92,39 +93,19 @@ export const skills = [
         image:
           "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
       },
-      // {
-      //   name: "Google Cloud",
-      //   image:
-      //     "https://static-00.iconduck.com/assets.00/google-cloud-platform-logo-icon-2048x1824-pg4wzspq.png",
-      // },
       {
         name: "Docker",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
       },
-      // {
-      //   name: "Jenkins",
-      //   image:
-      //     "https://toppng.com/uploads/preview/jenkins-logo-11609365847mufysaivph.png",
-      // },
-      // {
-      //   name: "Nginx",
-      //   image: "https://download.logo.wine/logo/Nginx/Nginx-Logo.wine.png",
-      // },
-      // {
-      //   name: "Grafana",
-      //   image:
-      //     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
-      // },
+      {
+        name: "Nginx",
+        image: "https://download.logo.wine/logo/Nginx/Nginx-Logo.wine.png",
+      },
       // {
       //   name: "Kubernetes",
       //   image:
       //     "https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png",
-      // },
-      // {
-      //   name: "Prometheus",
-      //   image:
-      //     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/1200px-Prometheus_software_logo.svg.png",
       // },
     ],
   },
@@ -234,30 +215,34 @@ export const education = [
     desc: "I completed my class 12 high school education at oswal School, Bhiwandi where I studied Science with Computer Science.",
     degree: "ISC(XII), Science with Computer",
   },
-];
+]; 
 
 export const projects = [
+
   {
-    id: 16,
-    title: "LinkRoom",
-    date: "oct 2024 - oct 2024",
-    description:
-      "It is my first scalable product, LinkRoom, where people can create multiple rooms, and within each room, they can add various links. Users can upload custom thumbnails for each room and share a single room link, allowing others to access all the links within that room. Additionally, users can view detailed analytics, including the number of clicks from specific locations and the devices used to access the room.",
-    image: Linkroom,
-    tags: [
-      "Next.js",
-      "PostgreSql",
-      "Prisma",
-      "Swr",
-      "cloudinary",
-      "Recharts",
-      "clerk",
-      "shadcnUi",
-    ],
-    category: "fullstack",
-    github: "https://github.com/Dilippurohit47/LinkManager",
-    webapp: "https://linkmanager.up.railway.app/",
-  },
+  id: 17,
+  title: "not-a-basic-chat-app",
+  date: "Oct 2024 - Oct 2024",
+  description:
+    "A fully scalable and secure real-time chat application featuring end-to-end encryption (E2EE), offline message sync, and Google login. Integrated Redis caching and Redis Pub/Sub for horizontal scalability with WebSockets. Includes typing indicators, online status tracking, group and direct messaging, message deletion, and AI-powered chat bot using vector DB for RAG. AWS S3 is used for secure media storage, and Docker ensures consistent deployment across environments.",
+  image: ChatApp, 
+  tags: [
+    "Redis", 
+    "WebSockets",
+    "AWS S3",
+    "Docker",
+    "CI/CD",
+    "PostgreSQL",
+    "AI Chatbot",
+    "Vector DB",
+    "E2EE",
+    "TypeScript",
+  ],
+  category: "fullstack",
+  github: "https://github.com/Dilippurohit47/chat-app-client", 
+  webapp: "https://chat-app-client-tawny.vercel.app/"
+},
+
   {
     id: 15,
     title: "englishlearn.ai",
@@ -270,13 +255,13 @@ export const projects = [
       "GeminiApi",
       "Razorpay",
       "Clerk",
-      "supabse",
+      "postgre",
       "webhooks",
       "shadcnUi",
     ],
     category: "fullstack",
     github: "https://github.com/Dilippurohit47/Ai-Based-English-learning-App",
-    webapp: "https://learnenglish.up.railway.app/",
+    webapp: "https://learn-englishai.vercel.app/",
   },
   {
     id: 5,
@@ -302,39 +287,7 @@ export const projects = [
     github: "https://github.com/Dilippurohit47/SketchBook",
     webapp: "https://sketch-book-4759.vercel.app/",
   },
-  {
-    id: 3,
-    title: "URL Shortner",
-    date: "Jun 2024 - jun 2024",
-    description:
-      "A URL shortener app that allows users to shorten URLs and track detailed analytics, including the number of clicks, the city and device used, and visualize the data with graphs for better insights.",
-    image: URL,
-    tags: ["react", "supabase", "Yup", "Qrcode", "shadcnUi", "postgreSql"],
-    category: "fullstack",
-    github: "https://github.com/Dilippurohit47/URL-Shortner",
-    webapp:
-      "https://url-shortner-n484lrz58-dilip-purohits-projects.vercel.app/",
-  },
-  {
-    id: 0,
-    title: "Rentals",
-    date: "Apr 2023 - May 2023",
-    description:
-      "Rentals is a web platform for easy rental property management, allowing owners to list properties with detailed descriptions and multiple images. Users can browse, search, and book rentals seamlessly with a real-time calendar that calculates costs. They can also save properties to favorites and select specific dates and times for their bookings, making Rentals a user-friendly solution for both renters and hosts.",
-    image: Rentals,
-    tags: [
-      "React.js",
-      "SCSS",
-      "Redux",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "multer",
-    ],
-    category: "fullstack",
-    github: "https://github.com/Dilippurohit47/Rental-Frontend",
-    webapp: "https://rental-frontend-six.vercel.app/",
-  },
+  
   {
     id: 1,
     title: "Video Calling App",

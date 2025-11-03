@@ -250,6 +250,7 @@ setProgress(progress)
     setToolTip(false)
   }
 
+  console.log("bio",Bio.resume)
   return (
     <div id="About">
       <HeroContainer>
