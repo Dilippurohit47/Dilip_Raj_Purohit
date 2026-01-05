@@ -35,7 +35,7 @@ Weekly Hustle 💥
 </div>
 <div className="logs-parent">
 
-{ sevenDaysLogs.length > 0 ?
+{ sevenDaysLogs &&  sevenDaysLogs?.length > 0 ?
 sevenDaysLogs?.map((log) =>{
 let workDone = (log.grand_total.hours * 60 )+ log.grand_total.minutes
 let totalTime = 14 * 60

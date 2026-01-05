@@ -1,3 +1,4 @@
+
 import styled, { ThemeProvider } from "styled-components";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
@@ -13,9 +14,8 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
 import { useState } from "react";
-import CodeTracker from "./components/sections/CodeTracker";
 import Tracking from "./pages/Tracking";
-import Home from "./Home"
+
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
@@ -39,17 +39,38 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
-function App() {
+const Home = () => {
+      const [openModal, setOpenModal] = useState({ state: false, project: null });
+    
   return (
-    <ThemeProvider theme={darkTheme}>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/"  element={<Home/>}/>
-          <Route path="/tracking" element={<Tracking />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-  );
-}
+    <>
+      <Navbar />
+      <Body>
+        <AnimatePresence>
+          <div>
+            <Hero />
+            <Wrapper>
+              <Skills />
+            </Wrapper>
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+            <Wrapper>
+              <Experience />
+              <Education />
+              <Contact />
+            </Wrapper>
+            <Footer />
 
-export default App;
+            {openModal.state && (
+              <ProjectDetails
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+              />
+            )}
+          </div>
+        </AnimatePresence>
+      </Body>
+    </>
+  );
+};
+
+export default Home

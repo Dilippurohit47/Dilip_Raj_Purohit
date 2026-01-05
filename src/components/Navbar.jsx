@@ -150,7 +150,7 @@ const Navbar = () => {
         </MobileIcon>
 
         <NavItems>
-          <NavLink href="#coding-time">Hustle Today</NavLink>
+          {/* <NavLink href="#coding-time">Hustle Today</NavLink> */}
           <NavLink href="#Experience">Experience</NavLink>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
